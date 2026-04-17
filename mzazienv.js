@@ -5,7 +5,7 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 
 global.SESSION_ID = process.env.SESSION_ID || '' 
 // Owner Setting
-global.xprefix = process.env.BOT_PREFIX ||'.'
+global.xprefix = process.env.BOT_PREFIX ||'/'
 global.owner = ["254750611309"]
 global.error = ["6666",]
 global.ownername = process.env.OWNER_NAME ||'Mzazi'

@@ -444,7 +444,7 @@ quoted: fkontak
 
         }*/
 if (m.isGroup) {
-    if (body.includes(`254750611309`)) {
+    if (body && body.includes(`254750611309`)) {
         reaction(m.chat, "❓")
     }
  }
@@ -490,7 +490,7 @@ return numUpper
         }
 ////////////tag owner reaction//////////////
 if (m.isGroup) {
-    if (body.includes(`@${owner}`)) {
+    if (body && body.includes(`@${owner}`)) {
         reaction(m.chat, "❌")
     }
  }
@@ -840,7 +840,12 @@ for (let plugin of plugins) {
 if (plugin.command.find(e => e == command.toLowerCase())) {
 pluginsDisable = false
 if (typeof plugin !== "function") return
+try {
 await plugin(m, trashdex)
+} catch (pluginErr) {
+console.error(`Plugin Error [${command}]:`, pluginErr.message)
+reply(`Plugin error: ${pluginErr.message}`)
+}
 }
 }
 if (!pluginsDisable) return
@@ -1065,12 +1070,17 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
   break;
 //==================================================//           
       case 'ping':
+try {
   const start = Date.now();
   const msg = await m.reply('Pinging...');
   const end = Date.now();
   const latency = end - start;
-  m.reply(`Pong! Latency: ${latency}ms`);
-  break; //==================================================//      
+  await m.reply(`Pong! Latency: ${latency}ms`);
+} catch (pingErr) {
+  console.error('Ping Error:', pingErr.message)
+  reply(`Ping error: ${pingErr.message}`)
+}
+break; //==================================================//      
     case 'yts': case 'ytsearch': {
                 if (!text) return reply(`Example : ${prefix + command} faded`)
                 let yts = require("yt-search")
