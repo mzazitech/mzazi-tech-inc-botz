@@ -1,6 +1,9 @@
 {
-  "users": {},
+  "sticker": {},
   "database": {},
+  "game": {},
+  "others": {},
+  "users": {},
   "chats": {
     "254750611309@s.whatsapp.net": {
       "antilinkgc": false,
@@ -280,9 +283,71 @@
       "welcome": false,
       "goodbye": false,
       "warn": {}
+    },
+    "254117474512@s.whatsapp.net": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "120363407826461196@g.us": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "254752313330@s.whatsapp.net": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "120363406078277148@g.us": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "254708001856@s.whatsapp.net": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "254750611309:95@s.whatsapp.net": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "120363408182714530@g.us": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "120363423483733336@g.us": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
+    },
+    "120363423514603442@g.us": {
+      "antilinkgc": false,
+      "antilink": false,
+      "welcome": false,
+      "goodbye": false,
+      "warn": {}
     }
   },
-  "game": {},
   "settings": {
     "254750611309": {
       "anticall": false,
@@ -317,8 +382,23 @@
       "warnCount": 3,
       "menuType": "externalImage",
       "autoRecord": false
+    },
+    "254708001856": {
+      "anticall": false,
+      "status": 0,
+      "stock": 10,
+      "autobio": false,
+      "autoTyping": true,
+      "auto_ai_grup": false,
+      "goodbye": false,
+      "onlygrub": false,
+      "onlypc": false,
+      "online": false,
+      "welcome": true,
+      "autoread": false,
+      "warnCount": 3,
+      "menuType": "externalImage",
+      "autoRecord": false
     }
-  },
-  "sticker": {},
-  "others": {}
+  }
 }

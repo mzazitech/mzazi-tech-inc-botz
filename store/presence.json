@@ -10,8 +10,8 @@
   "120363424289003326@g.us": {
     "id": "120363424289003326@g.us",
     "presences": {
-      "33247979434132@lid": {
-        "lastKnownPresence": "available"
+      "3822940385365@lid": {
+        "lastKnownPresence": "composing"
       }
     }
   },
@@ -74,7 +74,7 @@
   "120363424768435289@g.us": {
     "id": "120363424768435289@g.us",
     "presences": {
-      "172220387176596@lid": {
+      "162170029481996@lid": {
         "lastKnownPresence": "composing"
       }
     }
@@ -90,7 +90,7 @@
   "120363422711788187@g.us": {
     "id": "120363422711788187@g.us",
     "presences": {
-      "35206484517088@lid": {
+      "59387234238665@lid": {
         "lastKnownPresence": "composing"
       }
     }
@@ -115,6 +115,94 @@
     "id": "120363423866293304@g.us",
     "presences": {
       "175536034861123@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363424190900633@g.us": {
+    "id": "120363424190900633@g.us",
+    "presences": {
+      "162170029481996@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363423295997474@g.us": {
+    "id": "120363423295997474@g.us",
+    "presences": {
+      "166130123579628@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "182837462483112@lid": {
+    "id": "182837462483112@lid",
+    "presences": {
+      "182837462483112@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363425684643921@g.us": {
+    "id": "120363425684643921@g.us",
+    "presences": {
+      "155392604696782@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363421362168625@g.us": {
+    "id": "120363421362168625@g.us",
+    "presences": {
+      "119284395176045@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363410619420135@g.us": {
+    "id": "120363410619420135@g.us",
+    "presences": {
+      "182227593891862@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "13783338602608@lid": {
+    "id": "13783338602608@lid",
+    "presences": {
+      "13783338602608@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363406078277148@g.us": {
+    "id": "120363406078277148@g.us",
+    "presences": {
+      "10295774867550@lid": {
+        "lastKnownPresence": "available"
+      }
+    }
+  },
+  "259334990725321@lid": {
+    "id": "259334990725321@lid",
+    "presences": {
+      "259334990725321@lid": {
+        "lastKnownPresence": "composing"
+      }
+    }
+  },
+  "120363424037516705@g.us": {
+    "id": "120363424037516705@g.us",
+    "presences": {
+      "204084380496030@lid": {
+        "lastKnownPresence": "available"
+      }
+    }
+  },
+  "120363423483733336@g.us": {
+    "id": "120363423483733336@g.us",
+    "presences": {
+      "266172025049158@lid": {
         "lastKnownPresence": "composing"
       }
     }
