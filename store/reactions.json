@@ -1,0 +1,50 @@
+[
+  [
+    {
+      "key": {
+        "remoteJid": "120363425935906312@g.us",
+        "fromMe": false,
+        "id": "ACB85ADA85C8DB2A681B49F34F25C715",
+        "participant": "22454726615101@lid"
+      },
+      "reaction": {
+        "key": {
+          "remoteJid": "120363425935906312@g.us",
+          "fromMe": false,
+          "id": "A56C7F7A5BD303EB5F350F05AA4DFEFF",
+          "participant": "254103492255@s.whatsapp.net"
+        },
+        "text": "👍",
+        "senderTimestampMs": {
+          "low": 1952029861,
+          "high": 413,
+          "unsigned": false
+        }
+      }
+    }
+  ],
+  [
+    {
+      "key": {
+        "remoteJid": "120363425935906312@g.us",
+        "fromMe": false,
+        "id": "ACB85ADA85C8DB2A681B49F34F25C715",
+        "participant": "22454726615101@lid"
+      },
+      "reaction": {
+        "key": {
+          "remoteJid": "120363425935906312@g.us",
+          "fromMe": false,
+          "id": "A56C7F7A5BD303EB5F350F05AA4DFEFF",
+          "participant": "254103492255@s.whatsapp.net"
+        },
+        "text": "👍",
+        "senderTimestampMs": {
+          "low": 1952029861,
+          "high": 413,
+          "unsigned": false
+        }
+      }
+    }
+  ]
+]
