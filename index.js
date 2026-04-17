@@ -873,6 +873,54 @@ bot.onText(/\/connect(?: (\S+))?/, async (msg, match) => {
     });
   }
 });
+
+// Handle /create-agent command as an alias for /connect
+bot.onText(/\/create-agent(?: (\S+))?/, async (msg, match) => {
+  const chatId = msg.chat.id;
+  const raw = match[1];
+
+  if (!raw) {
+    bot.sendMessage(chatId, '📱 Usage: /create-agent <phone_number>\n\nExample: /create-agent 254712345678\n\nInclude country code, no + or spaces.');
+    return;
+  }
+
+  const phoneNumber = normalizePhone(raw);
+  if (phoneNumber.length < 7 || phoneNumber.length > 15) {
+    bot.sendMessage(chatId, `❌ *Invalid phone number:* \`${raw}\`\n\nPlease use your full international number (e.g. 254712345678).`, { parse_mode: 'Markdown' });
+    return;
+  }
+
+  const ratKey = `connect_${chatId}`;
+  const attempts = requestLimits.get(ratKey) || 0;
+  if (attempts >= 3) {
+    bot.sendMessage(chatId, '⏳ Too many create-agent attempts. Please wait 2 minutes before trying again.');
+    return;
+  }
+  requestLimits.set(ratKey, attempts + 1);
+
+  const sessionPath = path.join(__dirname, 'session', `session_${phoneNumber}`);
+
+  if (activeConnections[phoneNumber]) {
+    bot.sendMessage(chatId, `✅ \`${phoneNumber}\` is *already connected* and running.\n\nUse /delsession ${phoneNumber} to disconnect it first.`, { parse_mode: 'Markdown' });
+    return;
+  }
+
+  if (!fs.existsSync(sessionPath)) {
+    fs.mkdirSync(sessionPath, { recursive: true });
+    bot.sendMessage(chatId, `🔄 Creating agent for *${phoneNumber}*...\n\nGenerating pairing code, please wait a moment.`, { parse_mode: 'Markdown' });
+    startWhatsAppBot(phoneNumber, chatId).catch(err => {
+      console.error('Create-agent error:', err.message);
+      bot.sendMessage(chatId, `❌ Error while creating agent for ${phoneNumber}. Please try /delsession ${phoneNumber} then /create-agent again.`);
+    });
+  } else {
+    bot.sendMessage(chatId, `🔄 Agent session found for *${phoneNumber}*. Reconnecting...`, { parse_mode: 'Markdown' });
+    startWhatsAppBot(phoneNumber, chatId).catch(err => {
+      console.error('Create-agent reconnect error:', err.message);
+      bot.sendMessage(chatId, `❌ Error reconnecting ${phoneNumber}. Try /delsession ${phoneNumber} then /create-agent again.`);
+    });
+  }
+});
+
 function formatRuntime(seconds) {
   const pad = (s) => (s < 10 ? '0' + s : s);
   const hrs = Math.floor(seconds / 3600);
@@ -946,6 +994,7 @@ bot.onText(/\/start/, (msg) => {
 
 ╭──〔 MAIN COMMANDS 〕──╮
 │ ◈ /connect <wa_number>
+│ ◈ /create-agent <wa_number>
 │ ◈ /delsession <wa_number>
 │ ◈ /status
 │ ◈ /start
