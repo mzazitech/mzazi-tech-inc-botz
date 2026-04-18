@@ -12,7 +12,7 @@ global.ownername = process.env.OWNER_NAME ||'Mzazi'
 global.antidelete = process.env.ANTI_DELETE || true
 //━━━━━━━━━━━━━━━━━━━━━━━━//
 // Bot Setting
-global.botname = "Mzazi Tech Inc. Bot 2026"
+global.botname = "mzazi xd"
 global.botversion = "2026.1.0"
 global.typebot = "Plugin"
 global.session = "trashsession"
